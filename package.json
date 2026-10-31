@@ -1,0 +1,30 @@
+{
+  "name": "backend_learn",
+  "version": "1.0.0",
+  "description": "backend learn",
+  "license": "ISC",
+  "author": "Puneet",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cloudinary": "^2.11.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.11.3",
+    "mongoose-aggregate-paginate-v2": "^1.1.5",
+    "multer": "^2.5.0",
+    "node": "^26.12.1",
+    "prettier": "^3.9.10"
+  }
+}
