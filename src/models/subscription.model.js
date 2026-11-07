@@ -1,7 +1,7 @@
 import mongoose, {Schema} from "mongoose";
 
 const subscriptionSchema  = new Schema({
-    subscription:{
+    subscriber:{
         type: Schema.Types.ObjectId,
         ref: "User"
     },
@@ -11,4 +11,4 @@ const subscriptionSchema  = new Schema({
     }
 },{timestamps: true})
 
-export const Subscription = mongoose.model("Subcription",subscriptionSchema)
+export const Subscriptions = mongoose.model("Subcriptions",subscriptionSchema)
