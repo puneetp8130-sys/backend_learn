@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{server}}/users/history"
+method: GET
+body:
+  type: json
+  content: ""
+order: 8000

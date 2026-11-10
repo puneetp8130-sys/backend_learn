@@ -2,3 +2,7 @@ name: Development
 values:
   - key: server
     value: ''
+  - key: accessToken
+    value: ''
+  - key: refreshToken
+    value: ''

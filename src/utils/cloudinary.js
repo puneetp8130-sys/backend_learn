@@ -1,5 +1,4 @@
 import { v2 as cloudinary } from 'cloudinary'
-import { response } from 'express';
 import fs from 'fs'
 
 
@@ -9,7 +8,7 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
-const uploadOnClouninary = async (localFilePath) => {
+const uploadOnCloudinary = async (localFilePath) => {
     try{
         if(!localFilePath) return console.error("File Path Not Find");
         // upload the file on coudlinary
@@ -27,4 +26,4 @@ const uploadOnClouninary = async (localFilePath) => {
     }
 }
 
-export {uploadOnClouninary}
+export {uploadOnCloudinary}

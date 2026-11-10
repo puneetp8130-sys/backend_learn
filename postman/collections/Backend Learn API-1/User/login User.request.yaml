@@ -3,38 +3,20 @@ description: ""
 url: "{{server}}/users/login"
 method: POST
 body:
-  type: formdata
-  content:
-    - type: text
-      key: fullname
-      value: one
-      description: ""
-      disabled: false
-    - type: text
-      key: email
-      value: one@gmail.com
-      description: ""
-      disabled: false
-    - type: text
-      key: password
-      value: "12345678"
-      description: ""
-      disabled: false
-    - type: text
-      key: username
-      value: one123
-      description: ""
-      disabled: false
-    - type: file
-      key: avatar
-      src:
-        - /C:/Users/Puneet/Downloads/vegetable-biryani.jpg
-      description: ""
-      disabled: false
-    - type: file
-      key: coverImage
-      src:
-        - /C:/Users/Puneet/Downloads/ChatGPT Image Jun 23, 2026, 02_00_29 PM.png
-      description: ""
-      disabled: false
+  type: json
+  content: |-
+    {
+      "email": "one@gmail.com",
+      "username": "one123",
+      "password": "12345678"
+    }
 order: 2000
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      const json = pm.response.json();
+      if (json.data && json.data.accessToken) {
+          pm.environment.set("accessToken", json.data.accessToken);
+          pm.environment.set("refreshToken", json.data.refreshToken);
+      }

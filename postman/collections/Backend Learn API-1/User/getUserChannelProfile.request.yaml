@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{server}}/users/c/one"
+method: GET
+body:
+  type: json
+  content: ""
+order: 7000
